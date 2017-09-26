@@ -12,7 +12,6 @@
         <!--Interview Labs-->
         <scene sceneID="Dy3-TV-txG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v3z-bF-aUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="QdM-pe-ITq" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pNa-dz-y4m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -57,6 +56,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hDg-nA-Jjz" kind="show" id="o5Q-gF-2ur"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -68,8 +70,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Interview Labs" id="iUl-lm-YFj"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3z-bF-aUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1018" y="114"/>
+        </scene>
+        <!--Greetings View Controller-->
+        <scene sceneID="ETm-1d-XJM">
+            <objects>
+                <viewController id="hDg-nA-Jjz" customClass="GreetingsViewController" customModule="Interview_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNj-vl-7WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ba7-qO-7rt">
