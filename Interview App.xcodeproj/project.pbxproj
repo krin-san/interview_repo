@@ -13,6 +13,8 @@
 		B84F565B1F7A7EC1003BAB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B84F565A1F7A7EC1003BAB89 /* Assets.xcassets */; };
 		B84F565E1F7A7EC1003BAB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84F565C1F7A7EC1003BAB89 /* LaunchScreen.storyboard */; };
 		B84F56691F7A7EC1003BAB89 /* Interview_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F56681F7A7EC1003BAB89 /* Interview_AppTests.swift */; };
+		BCAD8C421F7AA537002C59AA /* PolitenessTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD8C411F7AA537002C59AA /* PolitenessTutor.swift */; };
+		BCAD8C441F7AA6F7002C59AA /* PolitenessTutorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD8C431F7AA6F7002C59AA /* PolitenessTutorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		B84F56641F7A7EC1003BAB89 /* Interview AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Interview AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84F56681F7A7EC1003BAB89 /* Interview_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview_AppTests.swift; sourceTree = "<group>"; };
 		B84F566A1F7A7EC1003BAB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCAD8C411F7AA537002C59AA /* PolitenessTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolitenessTutor.swift; sourceTree = "<group>"; };
+		BCAD8C431F7AA6F7002C59AA /* PolitenessTutorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolitenessTutorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B84F56531F7A7EC1003BAB89 /* AppDelegate.swift */,
+				BCAD8C411F7AA537002C59AA /* PolitenessTutor.swift */,
 				B84F56551F7A7EC1003BAB89 /* ViewController.swift */,
 				B84F56571F7A7EC1003BAB89 /* Main.storyboard */,
 				B84F565A1F7A7EC1003BAB89 /* Assets.xcassets */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B84F56681F7A7EC1003BAB89 /* Interview_AppTests.swift */,
+				BCAD8C431F7AA6F7002C59AA /* PolitenessTutorTests.swift */,
 				B84F566A1F7A7EC1003BAB89 /* Info.plist */,
 			);
 			path = "Interview AppTests";
@@ -201,6 +207,7 @@
 			files = (
 				B84F56561F7A7EC1003BAB89 /* ViewController.swift in Sources */,
 				B84F56541F7A7EC1003BAB89 /* AppDelegate.swift in Sources */,
+				BCAD8C421F7AA537002C59AA /* PolitenessTutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAD8C441F7AA6F7002C59AA /* PolitenessTutorTests.swift in Sources */,
 				B84F56691F7A7EC1003BAB89 /* Interview_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
