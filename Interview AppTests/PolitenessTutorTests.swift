@@ -9,7 +9,7 @@
 import XCTest
 @testable import Interview_App
 
-class NotificationCenter1: NotificationCenter {
+class TestNotificationCenter: NotificationCenter {
     
     var notificationWasPost: Bool = false
     var notificationType: NSNotification.Name?
@@ -43,35 +43,33 @@ class PolitenessTutorTests: XCTestCase {
     
     func testCheckForPolitnessPleaseExists() {
         let tutor = PolitenessTutor()
-        let result = tutor.checkForPoliteness("Hello, dear frined. Please, provide some usefull information")
+        let result = tutor.checkForPoliteness("You should say please.")
         XCTAssertTrue(result)
     }
     
     func testCheckForPolitnessSorryExists() {
         let tutor = PolitenessTutor()
-        let result = tutor.checkForPoliteness("sorry for being late")
+        let result = tutor.checkForPoliteness("I so sorry for being late!")
         XCTAssertTrue(result)
     }
     
     func testCheckForPolitnessWelcomeExists() {
         let tutor = PolitenessTutor()
-        let result = tutor.checkForPoliteness("welcome home")
+        let result = tutor.checkForPoliteness("I'd like to welcome you.")
         XCTAssertTrue(result)
     }
     
     func testCheckForPolitnessDoesntExist() {
         let tutor = PolitenessTutor()
-        let result = tutor.checkForPoliteness("home")
+        let result = tutor.checkForPoliteness("Welcome, Jack!")
         XCTAssertFalse(result)
     }
     
     func testNotifyPolite() {
-        let nc = NotificationCenter1()
-        let tutor = PolitenessTutor(notificationCenter: nc)
-        tutor.notificationCenter
-        
+        let notifictionCenter = TestNotificationCenter()
+        let tutor = PolitenessTutor(notificationCenter: notifictionCenter)
+        tutor.notifyIfPolite("please provide usefull information")
+        XCTAssertTrue(notifictionCenter.notificationWasPost)
+        XCTAssertEqual(notifictionCenter.notificationType?._rawValue, "PolitnessAlert")
     }
-    
-    
-    
 }
