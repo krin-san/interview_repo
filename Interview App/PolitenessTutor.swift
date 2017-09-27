@@ -11,7 +11,12 @@ import Foundation
 // Unit-testing of random access is not a good idea, so that's another example class.
 struct PolitenessTutor {
 
-    let notificationCenter = NotificationCenter()
+    let notificationCenter: NotificationCenter
+    
+    init(notificationCenter: NotificationCenter = .default) {
+        self.notificationCenter = notificationCenter
+        
+    }
 
     // Adds ", please" to the and of a request if needed.
     func makeRequestPolite(_ request: String) -> String {
