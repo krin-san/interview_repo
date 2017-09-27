@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GeneratedInfo: NSObject {
+class GeneratedInfo {
 
     let title: String
     let subtitlePart1: String
@@ -19,12 +19,11 @@ class GeneratedInfo: NSObject {
         self.subtitlePart1 = subtitlePart1
         self.subtitlePart2 = subtitlePart2
     }
-
 }
 
-class GreetingsGenerator: NSObject {
+class GreetingsGenerator {
 
-    let completion: (GeneratedInfo) -> ()
+    private let completion: (GeneratedInfo) -> ()
 
     init (_ completion: @escaping (GeneratedInfo) -> ()) {
         self.completion = completion
@@ -35,24 +34,29 @@ class GreetingsGenerator: NSObject {
         completion(item)
     }
 
-    func generateTitle() -> String {
-        let titles: [String] = ["Hello", "Hi", "Welcome", "Wazzap"]
+    private func generateTitle() -> String {
+        let titles = ["Hello", "Hi", "Welcome", "Wazzap"]
         // Get a random number for an any array item.
         let index = Int(arc4random_uniform(4))
         return titles[index]
     }
 
-    func generateSubtitlePart1() -> String {
-        let subtitles1: [String] = ["Mister", "Sir"]
+    private func generateSubtitlePart1() -> String {
+        let subtitles1 = ["Mister", "Sir"]
         // Get a random number for an any array item.
         let index = Int(arc4random_uniform(2))
         return subtitles1[index]
     }
 
-    func generateSubtitlePart2() -> String {
-        let subtitles1: [String] = ["Bob", "Tom", "Tony", "Adam", "Seed", "Mohammad al Rashid"]
-        // Get a random number for an any array item.
-        let index = Int(arc4random_uniform(6))
-        return subtitles1[index]
+    private func generateSubtitlePart2() -> String {
+        return ["Bob", "Tom", "Tony", "Adam", "Seed", "Mohammad al Rashid"].getRandom()
     }
+}
+
+extension Array {
+    
+    func getRandom() -> Element {
+        return self[Int(arc4random_uniform(UInt32(self.count)))]
+    }
+    
 }
