@@ -16,8 +16,8 @@ class GreetingsViewController: UIViewController {
 
     lazy var generator = {
         return GreetingsGenerator() { [weak self] item in
-            self?.titleLabel.text = item.title
-            self?.subtitleLabel.text = item.subtitlePart1 + " " + item.subtitlePart2
+            self?.titleLabel.text = item.greeting
+            self?.subtitleLabel.text = item.fullName
         }
     }()
 
@@ -37,11 +37,6 @@ class GreetingsViewController: UIViewController {
         generateButton.translatesAutoresizingMaskIntoConstraints = false
         generateButton.setTitle("Generate", for: .normal)
         generateButton.backgroundColor = .green
-
-        generator = GreetingsGenerator() { item in
-            self.titleLabel.text = item.title
-            self.subtitleLabel.text = item.subtitlePart1 + " " + item.subtitlePart2
-        }
     }
 
     override func viewDidLoad() {

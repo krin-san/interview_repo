@@ -10,18 +10,28 @@ import Foundation
 
 class GeneratedInfo {
 
-    let title: String
-    let subtitlePart1: String
-    let subtitlePart2: String
+    let greeting: String
+    let subtitle: String
+    let name: String
+	
+	var fullName: String {
+		return subtitle + " " + name
+	}
 
-    init(title: String, subtitlePart1: String, subtitlePart2: String) {
-        self.title = title
-        self.subtitlePart1 = subtitlePart1
-        self.subtitlePart2 = subtitlePart2
+    init(greeting: String, subtitle: String, name: String) {
+        self.greeting = greeting
+        self.subtitle = subtitle
+        self.name = name
     }
 }
 
 class GreetingsGenerator {
+	
+	
+	// MARK: - Constants
+	private let titles = ["Hello", "Hi", "Welcome", "Wazzap"]
+	private let subtitles = ["Mister", "Sir"]
+	private let names = ["Bob", "Tom", "Tony", "Adam", "Seed", "Mohammad al Rashid"]
 
     private let completion: (GeneratedInfo) -> ()
 
@@ -30,33 +40,20 @@ class GreetingsGenerator {
     }
 
     func generate() {
-        let item = GeneratedInfo(title: generateTitle(), subtitlePart1: generateSubtitlePart1(), subtitlePart2: generateSubtitlePart2())
+        let item = GeneratedInfo(greeting: generateTitle(), subtitle: generateSubtitles(), name: generateNames())
         completion(item)
     }
 
     private func generateTitle() -> String {
-        let titles = ["Hello", "Hi", "Welcome", "Wazzap"]
-        // Get a random number for an any array item.
-        let index = Int(arc4random_uniform(4))
-        return titles[index]
+        return titles.getRandom()
     }
 
-    private func generateSubtitlePart1() -> String {
-        let subtitles1 = ["Mister", "Sir"]
-        // Get a random number for an any array item.
-        let index = Int(arc4random_uniform(2))
-        return subtitles1[index]
+    private func generateSubtitles() -> String {
+        return subtitles.getRandom()
     }
 
-    private func generateSubtitlePart2() -> String {
-        return ["Bob", "Tom", "Tony", "Adam", "Seed", "Mohammad al Rashid"].getRandom()
+    private func generateNames() -> String {
+        return names.getRandom()
     }
 }
 
-extension Array {
-    
-    func getRandom() -> Element {
-        return self[Int(arc4random_uniform(UInt32(self.count)))]
-    }
-    
-}

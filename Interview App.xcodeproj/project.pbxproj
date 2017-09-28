@@ -15,6 +15,7 @@
 		B84F56691F7A7EC1003BAB89 /* Interview_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F56681F7A7EC1003BAB89 /* Interview_AppTests.swift */; };
 		BCAD8C3C1F7A8049002C59AA /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD8C3B1F7A8049002C59AA /* GreetingsViewController.swift */; };
 		BCAD8C3E1F7A89C1002C59AA /* GreetingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAD8C3D1F7A89C1002C59AA /* GreetingsGenerator.swift */; };
+		C698EDCC1F7CDF0F007662E9 /* Array+GetRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C698EDCB1F7CDF0E007662E9 /* Array+GetRandom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B84F566A1F7A7EC1003BAB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCAD8C3B1F7A8049002C59AA /* GreetingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
 		BCAD8C3D1F7A89C1002C59AA /* GreetingsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsGenerator.swift; sourceTree = "<group>"; };
+		C698EDCB1F7CDF0E007662E9 /* Array+GetRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GetRandom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				BCAD8C3B1F7A8049002C59AA /* GreetingsViewController.swift */,
 				BCAD8C3D1F7A89C1002C59AA /* GreetingsGenerator.swift */,
+				C698EDCB1F7CDF0E007662E9 /* Array+GetRandom.swift */,
 			);
 			path = "Code review";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				BCAD8C3E1F7A89C1002C59AA /* GreetingsGenerator.swift in Sources */,
 				B84F56541F7A7EC1003BAB89 /* AppDelegate.swift in Sources */,
 				BCAD8C3C1F7A8049002C59AA /* GreetingsViewController.swift in Sources */,
+				C698EDCC1F7CDF0F007662E9 /* Array+GetRandom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
